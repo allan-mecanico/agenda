@@ -1,0 +1,20 @@
+{% include "model-header.html" %}
+<h2>Evento</h2>
+<form action="submit" method="POST">{% csrf_token %}
+
+    <label> Título</label>
+    <br>
+    <input name="titulo" type="text" size="23">
+    <br>
+    <label>Data do Evento:</label>
+    <br>
+    <input name="data_evento" type="datetime-local">
+    <br>
+    <textarea name="Descricao" rows="5" cols="24"></textarea>
+    <br><br>
+    <button type="submit">Salvar</button>
+    <a href="/">
+    <button type="button">Cancelar</button>
+    </a>
+</form>
+{% include "model-footer.html" %}
